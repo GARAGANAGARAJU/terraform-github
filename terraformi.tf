@@ -1,7 +1,7 @@
 provider "aws" {
   region     = "us-west-2"
-  access_key = "secrets" "AWS_ACCESS_KEY_ID"
-  secret_key = "secrets" "AWS_SECRET_ACCESS_KEY"
+  access_key = secrets.AWS_ACCESS_KEY_ID
+  secret_key = secrets.AWS_SECRET_ACCESS_KEY
 }
 resource "aws_vpc" "vpc" {
   cidr_block = "10.0.0.0/16"
